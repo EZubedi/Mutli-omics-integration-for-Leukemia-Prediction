@@ -61,9 +61,9 @@ hist = model.fit(X_train, Y_train, batch_size=32, epochs=200, validation_data=(X
 print(model.evaluate(X_test, Y_test)[1])
 plt.plot(hist.history['loss'])
 plt.plot(hist.history['val_loss'])
-plt.title('Model for loss mean_squared_error ')
-plt.ylabel('Loss')
-plt.xlabel('Epoch')
+plt.title('Model for loss mean_squared_error', fontsize=20)
+plt.ylabel('Loss', fontsize=20)
+plt.xlabel('Epoch', fontsize=20)
 plt.legend(['Train', 'Val'], loc='upper right')
 plt.show()
 results = model.evaluate(X_test, Y_test, verbose = 0)
@@ -74,11 +74,12 @@ print('train loss, train acc:', results1)
 # compute the confusion matrix
 cm = confusion_matrix(Y_test, y_pred)
 #Plot the confusion matrix.
+sns.set(font_scale=1.4)
 sns.heatmap(cm,
             annot=True,
             fmt='g')
-plt.ylabel('Prediction',fontsize=13)
-plt.xlabel('Actual',fontsize=13)
+plt.ylabel('Prediction',fontsize=20)
+plt.xlabel('Actual',fontsize=20)
 plt.title('feedforward with mean_squared_error loss',fontsize=17)
 plt.show()
 
@@ -109,9 +110,9 @@ hist = model.fit(X_train, Y_train, batch_size=32, epochs=200, validation_data=(X
 print(model.evaluate(X_test, Y_test)[1])
 plt.plot(hist.history['loss'])
 plt.plot(hist.history['val_loss'])
-plt.title('Model for binary_crossentropy ')
-plt.ylabel('Loss')
-plt.xlabel('Epoch')
+plt.title('Model for binary_crossentropy', fontsize=20)
+plt.ylabel('Loss', fontsize=20)
+plt.xlabel('Epoch', fontsize=20)
 plt.legend(['Train', 'Val'], loc='upper right')
 plt.show()
 results = model.evaluate(X_test, Y_test, verbose = 0)
@@ -122,11 +123,12 @@ print('train loss, train acc:', results1)
 # compute the confusion matrix
 cm = confusion_matrix(Y_test, y_pred)
 #Plot the confusion matrix.
+sns.set(font_scale=1.4)
 sns.heatmap(cm,
             annot=True,
             fmt='g')
-plt.ylabel('Prediction',fontsize=13)
-plt.xlabel('Actual',fontsize=13)
+plt.ylabel('Prediction',fontsize=20)
+plt.xlabel('Actual',fontsize=20)
 plt.title('feedforward with binary_crossentropy loss',fontsize=17)
 plt.show()
 
@@ -153,9 +155,9 @@ hist = model.fit(X_train, Y_train,
 print(model.evaluate(X_test, Y_test)[1])
 plt.plot(hist.history['loss'])
 plt.plot(hist.history['val_loss'])
-plt.title('Model for binary_crossentropy loss')
-plt.ylabel('Loss')
-plt.xlabel('Epoch')
+plt.title('Model for binary_crossentropy loss', fontsize=20)
+plt.ylabel('Loss', fontsize=20)
+plt.xlabel('Epoch', fontsize=20)
 plt.legend(['Train', 'Val'], loc='upper right')
 plt.show()
 results = model.evaluate(X_test, Y_test, verbose = 0)
@@ -170,11 +172,12 @@ y_pred =(y_pred>0.5)
 list(y_pred)
 cm = confusion_matrix(Y_test, y_pred)
 #Plot the confusion matrix.
+sns.set(font_scale=1.4)
 sns.heatmap(cm,
             annot=True,
             fmt='g')
-plt.ylabel('Prediction',fontsize=13)
-plt.xlabel('Actual',fontsize=13)
+plt.ylabel('Prediction',fontsize=20)
+plt.xlabel('Actual',fontsize=20)
 plt.title('feedforward with binary_crossentropy',fontsize=17)
 plt.show()"""
 
@@ -201,9 +204,9 @@ hist = model.fit(X_train, Y_train,
 print(model.evaluate(X_test, Y_test)[1])
 plt.plot(hist.history['loss'])
 plt.plot(hist.history['val_loss'])
-plt.title('Model for mean_squared_error loss')
-plt.ylabel('Loss')
-plt.xlabel('Epoch')
+plt.title('Model for mean_squared_error loss', fontsize=20)
+plt.ylabel('Loss', fontsize=20)
+plt.xlabel('Epoch', fontsize=20)
 plt.legend(['Train', 'Val'], loc='upper right')
 plt.show()
 results = model.evaluate(X_test, Y_test, verbose = 0)
@@ -217,11 +220,12 @@ y_pred =(y_pred>0.5)
 list(y_pred)
 cm = confusion_matrix(Y_test, y_pred)
 #Plot the confusion matrix.
+sns.set(font_scale=1.4)
 sns.heatmap(cm,
             annot=True,
             fmt='g')
-plt.ylabel('Prediction',fontsize=13)
-plt.xlabel('Actual',fontsize=13)
+plt.ylabel('Prediction',fontsize=20)
+plt.xlabel('Actual',fontsize=20)
 plt.title('feedforward with mean_squared_error',fontsize=17)
 plt.show()
 
@@ -283,8 +287,8 @@ cm = confusion_matrix(Y_test, y_pred)
 sns.heatmap(cm,
             annot=True,
             fmt='g')
-plt.ylabel('Prediction',fontsize=13)
-plt.xlabel('Actual',fontsize=13)
+plt.ylabel('Prediction',fontsize=20)
+plt.xlabel('Actual',fontsize=20)
 plt.title('RNN with mean_squared_error',fontsize=17)
 plt.show()
 
@@ -345,8 +349,8 @@ cm = confusion_matrix(Y_test, y_pred)
 sns.heatmap(cm,
             annot=True,
             fmt='g')
-plt.ylabel('Prediction',fontsize=13)
-plt.xlabel('Actual',fontsize=13)
+plt.ylabel('Prediction',fontsize=20)
+plt.xlabel('Actual',fontsize=20)
 plt.title('RNN with binary_crossentropy',fontsize=17)
 plt.show()
 # define the keras model with relu activation mode with mean_squared_error loss and batch_size 32
@@ -408,8 +412,8 @@ cm = confusion_matrix(Y_test, y_pred)
 sns.heatmap(cm,
             annot=True,
             fmt='g')
-plt.ylabel('Prediction',fontsize=13)
-plt.xlabel('Actual',fontsize=13)
+plt.ylabel('Prediction',fontsize=20)
+plt.xlabel('Actual',fontsize=20)
 plt.title('RNN with binary_crossentropy',fontsize=17)
 plt.show()
 
@@ -473,8 +477,8 @@ cm = confusion_matrix(Y_test, y_pred)
 sns.heatmap(cm,
             annot=True,
             fmt='g')
-plt.ylabel('Prediction',fontsize=13)
-plt.xlabel('Actual',fontsize=13)
+plt.ylabel('Prediction',fontsize=20)
+plt.xlabel('Actual',fontsize=20)
 plt.title('RNN with mean_squared_error',fontsize=17)
 plt.show()"""
 
