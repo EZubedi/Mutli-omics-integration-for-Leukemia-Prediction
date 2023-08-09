@@ -79,12 +79,13 @@ print(classification_report(y_test,(fun(y_pred))))
 # compute the confusion matrix
 cm = confusion_matrix(y_test,fun(y_pred))
 #Plot the confusion matrix.
+sns.set(font_scale=1.4)
 sns.heatmap(cm,
             annot=True,
             fmt='g')
-plt.ylabel('Prediction',fontsize=13)
-plt.xlabel('Actual',fontsize=13)
-plt.title('Confusion Matrix for LogisticRegression',fontsize=17)
+plt.ylabel('Prediction',fontsize=20)
+plt.xlabel('Actual',fontsize=20)
+plt.title('Confusion Matrix for LR',fontsize=17)
 plt.show()
 
 # DecisionTreeClassifier
@@ -97,12 +98,13 @@ print(classification_report(y_test,(fun(y_pred))))
 # compute the confusion matrix
 cm = confusion_matrix(y_test,fun(y_pred))
 #Plot the confusion matrix.
+sns.set(font_scale=1.4)
 sns.heatmap(cm,
             annot=True,
             fmt='g')
-plt.ylabel('Prediction',fontsize=13)
-plt.xlabel('Actual',fontsize=13)
-plt.title('Confusion Matrix for DecisionTreeClassifier',fontsize=17)
+plt.ylabel('Prediction',fontsize=20)
+plt.xlabel('Actual',fontsize=20)
+plt.title('Confusion Matrix for DT',fontsize=17)
 plt.show()
 
 #GradientBoostingClassifier
@@ -115,12 +117,13 @@ print(classification_report(y_test,(fun(y_pred))))
 # compute the confusion matrix
 cm = confusion_matrix(y_test,fun(y_pred))
 #Plot the confusion matrix.
+sns.set(font_scale=1.4)
 sns.heatmap(cm,
             annot=True,
             fmt='g')
-plt.ylabel('Prediction',fontsize=13)
-plt.xlabel('Actual',fontsize=13)
-plt.title('Confusion Matrix for GradientBoostingClassifier',fontsize=17)
+plt.ylabel('Prediction',fontsize=20)
+plt.xlabel('Actual',fontsize=20)
+plt.title('Confusion Matrix for GB',fontsize=17)
 plt.show()
 
 #RandomForestClassifier
@@ -134,12 +137,13 @@ print(classification_report(y_test,(fun(y_pred))))
 # compute the confusion matrix
 cm = confusion_matrix(y_test,fun(y_pred))
 #Plot the confusion matrix.
+sns.set(font_scale=1.4)
 sns.heatmap(cm,
             annot=True,
             fmt='g')
-plt.ylabel('Prediction',fontsize=13)
-plt.xlabel('Actual',fontsize=13)
-plt.title('Confusion Matrix for RandomForestClassifier',fontsize=17)
+plt.ylabel('Prediction',fontsize=20)
+plt.xlabel('Actual',fontsize=20)
+plt.title('Confusion Matrix for RF',fontsize=17)
 plt.show()
 
 #NaiveBayess
@@ -153,13 +157,15 @@ print(classification_report(y_test,(fun(y_pred))))
 
 # compute the confusion matrix
 cm = confusion_matrix(y_test,fun(y_pred))
+
 #Plot the confusion matrix.
+sns.set(font_scale=1.4)
 sns.heatmap(cm,
             annot=True,
             fmt='g')
-plt.ylabel('Prediction',fontsize=13)
-plt.xlabel('Actual',fontsize=13)
-plt.title('Confusion Matrix for NaiveBayess',fontsize=17)
+plt.ylabel('Prediction',fontsize=20)
+plt.xlabel('Actual',fontsize=20)
+plt.title('Confusion Matrix for NB',fontsize=17)
 plt.show()
 
 #plotting all models ghraph in one ghraph
